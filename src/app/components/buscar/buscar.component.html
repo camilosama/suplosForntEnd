@@ -1,0 +1,22 @@
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Categorias
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" (click)="callApi('Science')">Science</a>
+        <a class="dropdown-item" (click)="callApi('Education')">Education</a>
+        <a class="dropdown-item" (click)="callApi('People')">People</a>
+        <a class="dropdown-item" (click)="callApi('Feelings')">Feelings</a>
+        <a class="dropdown-item" (click)="callApi('Computer')">Computer</a>
+        <a class="dropdown-item" (click)="callApi('Buildings')">Buildings</a>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col">
+        <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Buscar imagen...">
+    </div>
+</div>
+
+<app-cargando *ngIf="loading"></app-cargando>
+<app-cards *ngIf="!loading" [items]="nuevasImagenes"></app-cards>

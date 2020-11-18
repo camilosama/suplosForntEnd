@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "busquedaImg"
+    }
+  },
+  "defaultProject": "busquedaImg",
+  "cli": {
+    "analytics": false
+  }
 }

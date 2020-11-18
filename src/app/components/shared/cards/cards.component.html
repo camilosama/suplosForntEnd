@@ -1,0 +1,21 @@
+<div class="card-columns mt-3">
+    <div *ngFor="let imagen of items" class="card">
+        <img [src]="imagen.largeImageURL" class="card-img-top" alt="...">
+        <div class="shadow-lg p-3 mb-5 bg-white rounded card-body ">
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Likes <i class="fas fa-heart" style="color: crimson;"></i>
+                    <span class="badge badge-primary badge-pill">{{imagen.likes}}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Views <i class="fas fa-eye" style="color: darkblue;"></i>
+                    <span class="badge badge-primary badge-pill">{{imagen.views}}</span>
+                </li>
+                <li class="list-group-item justify-content-between align-items-center">
+                    Tags: <br/>
+                    <span class="badge badge-primary badge-pill">{{imagen.tags}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
